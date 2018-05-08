@@ -1,4 +1,4 @@
-## Multi-device
+# Multi-device
 
 Duration: 25 minutes
 
@@ -13,7 +13,7 @@ with large external monitors.
 This presents some challenges when creating a UI extension.
 
 
-### Stick to the defaults
+## Stick to the defaults
 
 When you stick to the snippets without extra styling, you are almost certain to
 create a UI extensions that works on all devices and also looks good.
@@ -58,12 +58,9 @@ Examples where defaults work better / simpler.
 > https://4me.4me.com/ui_extensions/3040
 
 
-### Mobile first
+## Mobile first
 
 When developing a UI extension, first make sure it works on a mobile device.
 On larger devices/screens it will usually work. If you start on a large screen
 and come up with some big/complex form, it is almost impossible to make it work
 on a mobile device after that.
-
-### Detecting device / full ui / self-service
-

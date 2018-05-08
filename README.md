@@ -1,33 +1,37 @@
-# Workshop: Advanced UI extensions
+# 4me Advanced UI Extensions Workshop
 
-## Agenda
+TODO: description
 
-Duration: 2 hours
+## What you will learn during this workshop
 
-* Introduction
+### Conditionals
 
-* Multi-device
+A common scenario in UI extensions is the need to conditionally hide or show
+certain fields and/or values. Depending on the business rules behind the form,
+this can become very complex, very quickly.
 
-* [Conditionals](002-conditionals.md)
+We will look at a number of techniques to keep this complexity under control and
+thus keeping the UI extension maintainable.
 
-* Customer cases and/or questions
+### ITRP.record
 
+Detecting full ui / self-service  
+ITRP.record.context => 'full_ui' or 'self_service'
 
-Possible:
+More ITRP.record:
+- ITRP.record.new
+- ITRP.record.initialValues
+- ITRP.record.initialValues.custom_data
+- ITRP.record.initialValues.get()
 
-25 minutes - Retrieving field options from 4me
-Build an example.
-NOTE: not sure about this one as it might be replaced by "data buckets".
+Conditional logic on other fields outside of extension like #req_status.
 
-25 minutes - I.UiExtensionsApi and the field API
-NOTE: not documented
+## Prerequisites
 
-TODO: emptying fields?
-TODO: explain submitting fields `display: none`
+TODO
 
+## Introduction
 
-## Customer cases/questions
+TODO: short introduction to UI extensions
 
-Duration: 25 minutes
-Prepare and discuss 2 or 3 cases from customers.
-If no cases were submitted, take 2 random UI extensions as example.
+[Continue to the first exercise.](exercises/01-initial-ui-extension.md)
