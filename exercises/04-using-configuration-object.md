@@ -5,10 +5,10 @@ complaints that the users are not always entering all information. The new
 requirement is to make the following fields required:
 
 * When type 'Road' is selected:
-    * Tire
+    * Tire size
     * Tape color
 * When type 'Mountain' is selected:
-    * Chain
+    * Chain size
     * Front shocks
 * When type 'Recumbent' is selected:
     * Flag
@@ -21,10 +21,10 @@ Users will ususally go for a similar pattern as we saw in the first exercise:
 
 ``` js
 if (this.value === "road") {
-  $("#tire-field").required();
+  $("#tire_size").required();
   ...
 } else if (this.value === "mountain") {
-  $("#chain-field").required();
+  $("#chain_size").required();
   ...
 }
 ...
@@ -38,14 +38,8 @@ fields are added.
 
 Implement requirement without adding an extra if/else branch.
 
-### Hints
-
-* Create a JavaScript object containing the different combinations of bicycle
-  types and their required fields.
-* You can specify multiple selectors in a single jQuery selector string, e.g.
-  `$('#tire-field, #chain-field')`.
-* You can scope the jQuery selector using `$(selector, scope)`, e.g. `$('input',
-  '#bicycle-fields')`.
+Storing the different combinations of bicycle types and their required fields in
+a JavaScript object is good starting point.
 
 Good luck!
 

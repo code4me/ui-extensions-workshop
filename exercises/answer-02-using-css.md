@@ -1,4 +1,4 @@
-# Answer Exercise 2
+## Answer Exercise 2
 
 ### HTML
 
@@ -76,19 +76,17 @@ $bicycleType.change(function() {
 
 We got rid of some code, hurray! Less code, less bugs :)
 
-The lines calling `show` and `hide` on each row were replaced by:
+The lines calling `hide()` on each row were replaced by a single line:
 
-``` js
-$bicycleFields.addClass('with-road-selected');
+```
+$bicycleFields.removeAttr('class');
 ```
 
-That will set the CSS class `with-road-selected` on the `#bicycle-fields`
-element when the "Road" option is selected.
+This removes the entire class attribute from the `#bicycle-fields` element.
 
-When the empty option is selected, the class attribute is removed. This is only
-possible when there are no other CSS classes already set on the
-`#bicycle-fields` element. Otherwise, you should explicitly remove the classes
-to avoid removing the existing classes as well:
+Note, that this is only possible when there are no other CSS classes already set
+on the `#bicycle-fields` element. Otherwise, you should explicitly remove the
+classes to avoid removing the existing classes as well. For example:
 
 ``` html
 <div id="bicycle-fields" class="blink">
@@ -96,9 +94,23 @@ to avoid removing the existing classes as well:
 </div>
 ```
 
+Calling `$bicycleFields.removeAttr('class')` would also remove the `blink` class
+in this case. Instead we have to specify explicitly which classes to remove:
+
 ``` js
 $bicycleFields.removeClass('with-road-selected with-mountain-selected');
 ```
+
+---
+
+The lines calling `show` on each row were replaced by:
+
+``` js
+$bicycleFields.addClass('with-road-selected');
+```
+
+That will set the CSS class `with-road-selected` on the `#bicycle-fields`
+element when the "Road" option is selected.
 
 Now, let's look at the CSS to see how those classes are used.
 
@@ -177,7 +189,7 @@ SCSS is an extension of the syntax of CSS. This means that every valid CSS
 stylesheet is a valid SCSS file with the same meaning.
 
 SCSS allows you (among other things) to nest your CSS selectors. This makes it
-possible to write simpler, more readable CSS. As comparison example, let's take
+possible to write simpler, more readable CSS. For example, let's take
 a look what the above SCSS selectors looks like in CSS:
 
 ``` css

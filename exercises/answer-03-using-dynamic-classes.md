@@ -1,4 +1,4 @@
-# Answer Exercise 3
+## Answer Exercise 3
 
 ### HTML
 
@@ -55,39 +55,33 @@
 
 ``` scss
 #bicycle-fields {
-  #size-field,
-  #chain-field,
-  #tire-field,
-  #front-shocks-field,
-  #rear-shocks-field,
-  #tape-field,
-  #flag-field {
-    display: none;
-  }
+  .row { display: none; }
 }
 
 #bicycle-fields.with-road-selected {
-  #size-field,
-  #chain-field,
-  #tire-field {
+  #size-row,
+  #chain-size-row,
+  #tire-size-row {
     display: block;
   }
 }
 
 #bicycle-fields.with-mountain-selected {
-  #size-field,
-  #chain-field,
-  #tape-field,
-  #front-shocks-field,
-  #rear-shocks-field {
+  #size-row,
+  #chain-size-row,
+  #tire-size-row,
+  #tape-size-row,
+  #front-shocks-row,
+  #rear-shocks-row {
     display: block;
   }
 }
 
 #bicycle-fields.with-recumbent-selected {
-  #chain-field,
-  #tire-field,
-  #flag-field {
+  #size-row,
+  #chain-size-row,
+  #tire-size-row,
+  #flag-row {
     display: block;
   }
 }
@@ -111,8 +105,11 @@ $bicycleType.change(function() {
 }).change();
 ```
 
-Instead of specifying each option in the if/else-statement, there is only a
-single if statement present:
+---
+
+In the previous example, each selectable option had it's own branch in the
+if/else-statement. Instead of specifying each option, there is only a single if-
+statement present:
 
 ``` js
 if (this.value !== '') {
@@ -121,15 +118,16 @@ if (this.value !== '') {
 ```
 
 Nothing has to be done when the empty option was selected. The fields are
-already hidden, because of the previous line. When a non-empty option is
-selected (`this.value !== ''`), the CSS class for that specific option can be
-added to the `#bicycle-fields` elements:
+already hidden, because of the line that removes the `class` attribute. When a
+non-empty option is selected (`this.value !== ''`), the CSS class for that
+specific option can be added to the `#bicycle-fields` elements:
 
 ``` js
 $bicycleFields.addClass('with-' + this.value + '-selected');
 ```
 
-This triggers the CSS rules as explained in the previous exercise, showing the
-fields for that option.
+This evaluates to `$bicycleFields.addClass('with-road-selected')`. This triggers
+the CSS rules as explained in the previous exercise, showing the fields for that
+option.
 
 [Continue to the next exercise.](04-using-configuration-object.md)

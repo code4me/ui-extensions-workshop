@@ -1,4 +1,4 @@
-# Exercise 1: initial UI extension
+## Exercise 1: initial UI extension
 
 Assume your organization allows new employees to select and customize a bike.
 You are asked to create a UI extension that allows the new employee to select
@@ -28,8 +28,13 @@ All parts can be specified using free text.
 
 ### Exercise
 
-First, create a new UI extension called "New Bike" in the "wdc" account. We will
-keep building on this UI extension through this set of exercises.
+First, create a new UI extension called "New bicycle" in the "wdc" account. We
+will keep building on this UI extension through this set of exercises.
+
+Link the UI extension to the
+"[Personal computer for new employee](https://wdc.4me-demo.com/request_templates/195)"
+Request Template. You can also rename the template into "Bicycle for new
+employee".
 
 Now implement the UI extension according to the above description. It should
 look like this when you are done:

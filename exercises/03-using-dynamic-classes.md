@@ -58,10 +58,6 @@ not do that, as it will lead to maintainability problems down the road.
 Implement requirement without increasing the number of JavaScript lines. You can
 dynamically build the CSS class name to achieve this.
 
-### Hints
-
-* You can remove the `if`- conditions by dynamically building the class name.
-
 Good luck!
 
 [Continue to answer.](answer-03-using-dynamic-classes.md)

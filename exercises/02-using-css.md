@@ -12,14 +12,10 @@ especially when there 10 options instead of 2 in this example.
 
 ### Exercise
 
-Implement requirement without increasing the number of lines of JavaScript. You
-can use CSS to achieve this.
+Implement requirement and decrease the number of lines of JavaScript.
 
-### Hints
-
-* Add a wrapper element around the fields whose visibility is dependent on the
-  selected bicycle type.
-* Create CSS classes that specify which fields are for each role.
+You can do this by creating CSS classes that specify which fields are visible
+for each type of bike.
 
 Good luck!
 
