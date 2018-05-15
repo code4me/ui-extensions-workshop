@@ -158,6 +158,4 @@ The `readonly()` function works the same way as the `required()` function.
 
 ---
 
-TODO: add a bonus exercise explaining how this example works:
-https://developer.4me.com/v1/ui_extensions/advanced_examples/#add-another-set-of-fields
-
+# THE END!
